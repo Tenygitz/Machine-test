@@ -288,7 +288,11 @@ nav {
   color: white;
   transform: rotateY(180deg);
 }
-
+.flip-box-front.service {
+  p {
+   
+    text-align: left;
+  }}
 /* Media Queries  */
 @media (max-width: 768px) {
   header {
@@ -351,5 +355,7 @@ nav {
   margin-top: 20px;
   height: 270px;
 }
-
+.flip-box-front.service{ p{
+  text-align: justify;
+}}
 }

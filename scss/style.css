@@ -313,6 +313,10 @@ header .scaled-form {
   transform: rotateY(180deg);
 }
 
+.flip-box-front.service p {
+  text-align: left;
+}
+
 /* Media Queries  */
 @media (max-width: 768px) {
   header .top-bar {
@@ -369,5 +373,8 @@ header .scaled-form {
   .flip-box {
     margin-top: 20px;
     height: 270px;
+  }
+  .flip-box-front.service p {
+    text-align: justify;
   }
 }/*# sourceMappingURL=style.css.map */
