@@ -10,7 +10,6 @@ html,body {
   background: $gray;
   padding: 0;
   margin: 0;
-  color: $primary;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -80,7 +79,7 @@ nav {
   align-items: center;
   background: linear-gradient(100deg, rgba(10, 10, 59, 0.6) 0%, rgba(114, 200, 197, 0.6) 70%), 
   url('./src/bg.jpg') center/cover no-repeat;
-  min-height: 60vh;
+  min-height: 70vh;
   padding: 3rem 2rem;
   .hero-content {
     max-width: 40%;
@@ -251,6 +250,7 @@ nav {
   height: 300px;
   perspective: 1000px; 
   overflow: hidden; 
+ 
 }
 
 .flip-box-inner {
@@ -260,6 +260,7 @@ nav {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  
 }
 
 .flip-box:hover .flip-box-inner {
