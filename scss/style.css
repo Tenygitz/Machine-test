@@ -1,0 +1,359 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  color: #0a2a43;
+}
+
+header .top-bar {
+  background: #0a2a43;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 2rem;
+  font-size: 0.8rem;
+}
+header .top-bar .socials i {
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+header .top-bar .socials i:hover {
+  transform: scale(1.7);
+}
+header .top-bar .top-bar-main span:not(:last-child) {
+  margin: 10px;
+  border-right: 1px solid gainsboro;
+  padding-right: 20px;
+}
+header .top-bar .top-bar-main i {
+  color: #72c8c5;
+}
+header nav {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+header nav .logo img {
+  height: 35px;
+}
+header nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+header nav .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #0a2a43;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+header nav ul li {
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+header nav ul li:hover {
+  color: #4fd1c5;
+}
+header .scaled-form {
+  transform: scale(0.5);
+  height: auto;
+  padding: 4rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(100deg, rgba(10, 10, 59, 0.6) 0%, rgba(114, 200, 197, 0.6) 70%), url("./src/bg.jpg") center/cover no-repeat;
+  min-height: 60vh;
+  padding: 3rem 2rem;
+}
+.hero .hero-content {
+  max-width: 40%;
+  animation: fadeInLeft 1s ease;
+}
+.hero .hero-content h1 {
+  --text-color: #ffffff;
+  --stroke-color: #4fd1c5;
+  --animation-duration: 5s;
+  font-size: 3.5rem;
+  font-weight: 700;
+  position: relative;
+  color: var(--stroke-color);
+  -webkit-text-stroke: 0px var(--stroke-color);
+  background: linear-gradient(90deg, var(--text-color) 60%, var(--stroke-color) 10%) 0 0/200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-fill var(--animation-duration) linear infinite;
+}
+@keyframes text-fill {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.hero .hero-content p {
+  margin: 1.5rem 0;
+  color: #fcfcf9;
+}
+.hero .hero-content .get-started {
+  --color: #Ffffff;
+  position: relative;
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  color: #ffffff;
+  background-color: #72c8c5;
+  text-decoration: none;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 0.5em;
+  transition: box-shadow 0.3s ease;
+  /* NEON LIGHT GLOW */
+  text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.45em var(--color);
+  box-shadow: inset 0 0 0.5em 0 var(--color), 0 0 0.5em 0 var(--color);
+  /* GLOWING HOVER EFFECT */
+}
+.hero .hero-content .get-started::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 1em 0.2em var(--color);
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  border-radius: 0.5em;
+  pointer-events: none;
+}
+.hero .hero-content .get-started:hover::after {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.hero .tax-rebate-form {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 350px;
+  animation: slideInRight 1.7s cubic-bezier(0.7, 1, 0.9, 1) forwards;
+  will-change: transform, opacity;
+}
+.hero .tax-rebate-form h2 {
+  margin-bottom: 1rem;
+}
+.hero .tax-rebate-form input[type=text], .hero .tax-rebate-form input[type=email] {
+  width: 90%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  transition: border 0.3s;
+}
+.hero .tax-rebate-form input[type=text]:focus, .hero .tax-rebate-form input[type=email]:focus {
+  border: 1.5px solid #4fd1c5;
+}
+.hero .tax-rebate-form label {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.hero .tax-rebate-form label input[type=checkbox] {
+  margin-right: 0.5rem;
+}
+.hero .tax-rebate-form label a {
+  color: #4fd1c5;
+  text-decoration: underline;
+}
+.hero .tax-rebate-form button {
+  background: #0a2a43;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.hero .tax-rebate-form button:hover {
+  background: #4fd1c5;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  height: 50vh;
+  padding: 3rem 2rem;
+}
+.services .service {
+  text-align: justify;
+  max-width: 300px;
+  animation: fadeInUp 1s ease;
+  padding: 35px 20px;
+  border-radius: 30px;
+}
+.services .service i {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  padding: 15px;
+  border-radius: 50px;
+  background-color: #72c8c5;
+}
+.services .service h3 {
+  margin-bottom: 1rem;
+}
+.services .service p {
+  color: #444;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #f5f6fa;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #72c8c5;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Media Queries  */
+@media (max-width: 768px) {
+  header .top-bar {
+    padding: 10px;
+    font-size: 0.7rem;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  header .top-bar .socials {
+    margin-top: 0.5rem;
+  }
+  header nav {
+    padding: 0.5rem 1rem;
+  }
+  header nav .hamburger {
+    display: block;
+  }
+  header nav ul {
+    display: none;
+  }
+  header .scaled-form {
+    transform: scale(1);
+    padding: 1rem;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .hero .hero-content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero .tax-rebate-form {
+    width: 300px;
+    padding: 20px;
+  }
+  .hero h2 {
+    font-size: 23px;
+  }
+  .services {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .services .service {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
