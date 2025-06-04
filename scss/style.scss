@@ -105,14 +105,7 @@ nav {
 }
 
 
-@keyframes text-fill {
-  0% {
-    background-position: 200% 0; 
-  }
-  100% {
-    background-position: 0 0; 
-  }
-              }
+
     p { margin: 1.5rem 0; color:#fcfcf9}
    .get-started {
   --color: #Ffffff; 
@@ -178,14 +171,15 @@ nav {
     button {
       background: $primary;
       color: $white;
-      border: none;
       padding: 0.7rem 2rem;
       border-radius: 25px;
       font-size: 1rem;
       cursor: pointer;
       transition: background 0.3s;
-      &:hover { background: $accent; }
-      
+      &:hover { background: $accent;border: 2px solid rgb(255, 252, 252); }
+      i{
+        padding-left: 5px;
+      }
     }
    
   }
@@ -217,6 +211,14 @@ nav {
 }
 
 // Animations
+@keyframes text-fill {
+  0% {
+    background-position: 200% 0; 
+  }
+  100% {
+    background-position: 0 0; 
+  }
+              }
 @keyframes fadeInLeft {
   from { opacity: 0; transform: translateX(-40px);}
   to { opacity: 1; transform: translateX(0);}
@@ -243,8 +245,9 @@ nav {
 .flip-box {
   background-color: transparent;
   width: 300px;
-  height: 200px;
+  height: 300px;
   perspective: 1000px; 
+  overflow: hidden; 
 }
 
 .flip-box-inner {
@@ -261,10 +264,14 @@ nav {
 }
 
 .flip-box-front, .flip-box-back {
-  position: absolute;
+   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  margin: 0;          
+  box-sizing: border-box;
 }
 
 .flip-box-front {
@@ -282,7 +289,7 @@ nav {
 @media (max-width: 768px) {
   header {
     .top-bar {
-      padding: 10px;
+      padding: 10px 15px;
       font-size: 0.7rem;
       flex-direction: column;
       align-items: flex-end;
@@ -328,11 +335,17 @@ nav {
   .services {
     flex-direction: column;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 10px 40px;
     .service {
       max-width: 100%;
       margin-bottom: 2rem;
       text-align: center;
     }
   }
+
+.flip-box {
+  margin-top: 20px;
+  height: 270px;
+}
+
 }
