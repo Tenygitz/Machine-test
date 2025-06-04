@@ -3,6 +3,8 @@ body {
   background: #f5f6fa;
   margin: 0;
   color: #0a2a43;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header .top-bar {
